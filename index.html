@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    #loadingScreen {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    .loader {
+      border: 16px solid #f3f3f3;
+      border-top: 16px solid #f09e34;
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      animation: spin 2s linear infinite;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -100px;
+      margin-left: -60px;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    #loadingText {
+      position: absolute;
+      top: calc(50% + 60px);
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 20px;
+    }
+   
+  </style>
+</head>
+
+
+<body >
+  <section id="zero" class="mt-3 text-center">
+    <h1 class=" text-black text-center ml-5  text-4xl font-bold md:text-black ">Which describe you best?</h1>
+    <p class="text-center mt-5 ml-5">This will help us personalize your experience</p>
+    <div class="p-8 ">
+
+      <ul role="list" class="p-3  divide-y divide-slate-200 block m-auto">
+        <li
+          class="border w-80 mx-auto  rounded-md border-gray-400 p-3  flex py-4 first:pt-2 last:pb-2 hover:shadow-lg hover:shadow-gray-500 hover:border-gray-700">
+          <img class=" h-10 w-10 rounded-full"
+            src="https://images.pexels.com/photos/16039120/pexels-photo-16039120/free-photo-of-sunlit-rocks-on-sea-shore.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load"
+            alt="" />
+          <div class="ml-3 overflow-hidden p-2 ">
+            <p class="text-sm font-medium text-slate-900"><span>Student</span><span class="text-gray-500"> or soon to be
+                enrolled</span></p>
+          </div>
+        </li>
+      </ul>
+      <ul role="list" class="p-3 divide-y divide-slate-200 ">
+        <li
+          class="border w-80 mx-auto rounded-md border-gray-400 p-3  flex py-4 first:pt-2 last:pb-2 hover:shadow-lg hover:shadow-gray-500 hover:border-gray-700">
+          <img class=" h-10 w-10 rounded-full"
+            src="https://images.pexels.com/photos/16039120/pexels-photo-16039120/free-photo-of-sunlit-rocks-on-sea-shore.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load"
+            alt="" />
+          <div class="ml-3 overflow-hidden p-2 ">
+            <p class="text-sm font-medium text-slate-900"><span>Professional </span><span class="text-gray-500">pursuing
+                a career </span></p>
+          </div>
+        </li>
+      </ul>
+      <ul role="list" class="p-3 divide-y divide-slate-200 ">
+        <li
+          class="border w-80 mx-auto rounded-md border-gray-400 p-3  flex py-4 first:pt-2 last:pb-2 hover:shadow-lg hover:shadow-gray-500 hover:border-gray-700">
+          <img class=" h-10 w-10 rounded-full"
+            src="https://images.pexels.com/photos/16039120/pexels-photo-16039120/free-photo-of-sunlit-rocks-on-sea-shore.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load"
+            alt="" />
+          <div class="ml-3 overflow-hidden p-2 ">
+            <p class="text-sm font-medium text-slate-900"><span>Parent </span><span class="text-gray-500">of a
+                school-age child</span></p>
+          </div>
+        </li>
+      </ul>
+      <ul role="list" class="p-3 divide-y divide-slate-200 ">
+        <li
+          class="border w-80 mx-auto rounded-md border-gray-400 p-3 flex py-4 first:pt-2 last:pb-2 hover:shadow-lg hover:shadow-gray-500 hover:border-gray-700">
+          <img class=" h-10 w-10 rounded-full"
+            src="https://images.pexels.com/photos/16039120/pexels-photo-16039120/free-photo-of-sunlit-rocks-on-sea-shore.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load"
+            alt="" />
+          <div class="ml-3 overflow-hidden p-2 ">
+            <p class="text-sm font-medium text-slate-900"><span>Lifelong learner</span></p>
+          </div>
+        </li>
+      </ul>
+      <ul role="list" class="p-3 divide-y divide-slate-200 ">
+        <li
+          class="border w-80 mx-auto rounded-md border-gray-400 p-3 flex py-4 first:pt-2 last:pb-2 hover:shadow-lg hover:shadow-gray-500 hover:border-gray-700">
+          <img class=" h-10 w-10 rounded-full"
+            src="https://images.pexels.com/photos/16039120/pexels-photo-16039120/free-photo-of-sunlit-rocks-on-sea-shore.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load"
+            alt="" />
+          <div class="ml-3 overflow-hidden p-2 ">
+            <p class="text-sm font-medium text-slate-900"><span>Teacher</span></p>
+          </div>
+        </li>
+      </ul>
+      <ul role="list" class="p-3 divide-y divide-slate-200 ">
+        <li
+          class="border w-80 mx-auto rounded-md border-gray-400 p-3 flex py-4 first:pt-2 last:pb-2 hover:shadow-lg hover:shadow-gray-500 hover:border-gray-700">
+          <img class=" h-10 w-10 rounded-full"
+            src="https://images.pexels.com/photos/16039120/pexels-photo-16039120/free-photo-of-sunlit-rocks-on-sea-shore.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load"
+            alt="" />
+          <div class="ml-3 overflow-hidden p-2 ">
+            <p class="text-sm font-medium text-slate-900"><span>Other</span></p>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+    <div class="text-center h-10">
+
+      <a  href="#first" class="bg-black text-white border mx-auto rounded-md py-3 px-6 text-center mb-9 hover:bg-slate-700" id="show-paragraph-btn4">
+         Continue</a>
+    </div>
+  </section>
+
+
+
+  <section class="mt-36" id="hidden-paragraph4" style="display: none;">
+    <div  id="first"  class="">
+    <h1 class=" text-black text-center text-4xl font-bold">What are you most interested in</h1>
+    <p class="text-center mt-5 m-5">choose just one. This will help us get you started (but won't limit your experience)</p>
+    <div class="p-4 ">
+
+      <ul role="list" class="pt-3 divide-y divide-slate-200 mx-2">
+        <li
+          class="border mx-auto rounded-md border-gray-400 w-96 p-3 flex py-4 first:pt-2 last:pb-2 hover:shadow-lg hover:shadow-gray-500 hover:border-pink-500">
+          <img class=" h-10 w-10 rounded-full"
+            src="https://images.pexels.com/photos/16039120/pexels-photo-16039120/free-photo-of-sunlit-rocks-on-sea-shore.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load"
+            alt="" />
+          <div class="ml-3 overflow-hidden p-2 ">
+            <p class="text-sm font-medium text-slate-900"><span>Learning specific skills to advance my career</span></p>
+          </div>
+        </li>
+      </ul>
+      <ul role="list" class="pt-3 divide-y divide-slate-200 mx-2">
+        <li
+          class="border mx-auto rounded-md border-gray-400 p-3 w-96 flex py-4 first:pt-2 last:pb-2 hover:shadow-lg hover:shadow-gray-500 hover:border-pink-500">
+          <img class=" h-10 w-10 rounded-full"
+            src="https://images.pexels.com/photos/16039120/pexels-photo-16039120/free-photo-of-sunlit-rocks-on-sea-shore.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load"
+            alt="" />
+          <div class="ml-3 overflow-hidden p-2 ">
+            <p class="text-sm font-medium text-slate-900"><span>Exploring new topics I'm interested in</span></p>
+          </div>
+        </li>
+      </ul>
+      <ul role="list" class="pt-3 divide-y divide-slate-200 mx-2 ">
+        <li
+          class="border mx-auto rounded-md border-gray-400 p-3 w-96 flex py-4 first:pt-2 last:pb-2 hover:shadow-lg hover:shadow-gray-500 hover:border-pink-500">
+          <img class=" h-10 w-10 rounded-full"
+            src="https://images.pexels.com/photos/16039120/pexels-photo-16039120/free-photo-of-sunlit-rocks-on-sea-shore.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load"
+            alt="" />
+          <div class="ml-3 overflow-hidden p-2 ">
+            <p class="text-sm font-medium text-slate-900"><span>Refreshing my math foundations </span></p>
+          </div>
+        </li>
+      </ul>
+      <ul role="list" class="pt-3 divide-y divide-slate-200 mx-2 ">
+        <li
+          class="border mx-auto rounded-md border-gray-400 p-3 w-96 flex py-4 first:pt-2 last:pb-2 hover:shadow-lg hover:shadow-gray-500 hover:border-pink-500">
+          <img class=" h-10 w-10 rounded-full"
+            src="https://images.pexels.com/photos/16039120/pexels-photo-16039120/free-photo-of-sunlit-rocks-on-sea-shore.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load"
+            alt="" />
+          <div class="ml-3 overflow-hidden p-2 ">
+            <p class="text-sm font-medium text-slate-900"><span>exercising my brain to stay sharp</span></p>
+          </div>
+        </li>
+      </ul>
+      <ul role="list" class="pt-3 divide-y divide-slate-200 mx-2">
+        <li
+          class="border mx-auto rounded-md border-gray-400 p-3 w-96 flex py-4 first:pt-2 last:pb-2 hover:shadow-lg hover:shadow-gray-500 hover:border-pink-500 ">
+          <img class=" h-10 w-10 rounded-full"
+            src="https://images.pexels.com/photos/16039120/pexels-photo-16039120/free-photo-of-sunlit-rocks-on-sea-shore.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load"
+            alt="" />
+          <div class="ml-3 overflow-hidden p-2 ">
+            <p class="text-sm font-medium text-slate-900"><span>Something else</span></p>
+          </div>
+        </li>
+      </ul>
+
+
+    </div>
+    <div class="text-center h-10 mt-8">
+
+  
+          <a  href="#secondblock" class="bg-black text-white border mx-auto rounded-md py-3 px-6 text-center mb-9 hover:bg-slate-700" id="show-paragraph-btn3">
+            Continue</a>
+    </div>
+  </div>
+  </section>
+
+
+  <section class="text-center pt-48 " id="hidden-paragraph3" style="display: none;">
+    <div id="secondblock" class="md:inline-flex gap-16 text-center pt-28 pl-10 pr-10" >
+
+      <div ><img class="w-56 rounded-md sm:w-60 block m-auto"
+          src="https://images.unsplash.com/photo-1571836058997-75416985f1be?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx2aXN1YWwtc2VhcmNofDEyMXx8fGVufDB8fHx8fA%3D%3D">
+      </div>
+      <div class="mt-14">
+        <div class=" text-black mt-8 text-4xl font-bold">You're in the right place</div>
+        <div class=" mt-5 w-96 text-start block m-auto pr-10">Brilliant get your hand on to help improve your professional skills and
+          knowledge. You will interact with concepts and solve fun problems in math science and computer science.</div>
+      </div>
+    </div>
+    <div class="mt-16 text-center">
+      <a  href="#third" class="bg-black text-white border mx-auto rounded-md py-3 px-6 text-center mb-9 hover:bg-slate-700" id="show-paragraph-btn2">Continue</a>
+          
+    </div>
+  </section>
+
+
+
+  <section  class=" pb-20 pt-40 pl-2" >
+<div id="hidden-paragraph2" style="display: none;"  >
+    <div  class="" id="third">
+      <h1 class=" mt-15 text-black text-center mt-8 text-4xl font-bold">What is your math comfort level</h1>
+      <p class="text-center mt-5 p-7">Choose the highest level you feel confident in - you can always adjust later</p>
+    </div>
+    <div class="flex flex-wrap   ">
+      <div class="border mt-1 mx-auto rounded-md border-gray-400 p-5 hover:shadow  hover:border-2 hover:border-yellow-700 sm:mt-5">
+        <img class="pt-5 pr-5 pl-5 w-64"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmfgVJSYO2o-Uy9rOVow6BltvOybWmaFPVcXHcyY6yG6nqsEW7Fe0h0YTE_yDQwT-Dq6Q&usqp=CAU">
+        <p class="text-center font-bold">Arithmetic</p>
+        <p class="text-center text-gray-500 pt-1">Introductory</p>
+      </div>
+      <div
+        class="border mt-1 mx-auto rounded-md border-gray-400 p-5 hover:shadow  hover:border-2 hover:border-yellow-700  sm:mt-5">
+        <img class="pt-5 pr-5 pl-5 pb-5 w-64"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHteA6wpGdSeWEb_NJnN4VcWecR0BRK9WFA20Rc0ogO7fjeEDsETiYG1Ye_z826099nNs&usqp=CAU">
+        <p class="text-center font-bold ">Basic Algebra</p>
+        <p class="text-center text-gray-500 pt-1">Foundational</p>
+      </div>
+      <div
+        class="border mt-1 mx-auto rounded-md border-gray-400 p-5 hover:shadow  hover:border-2 hover:border-yellow-700 sm:mt-5">
+        <img class="pt-5 pr-5 pl-5  w-64"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb8ZOD-i-5XCOQe3o6047426NqEpLqczSN0g&s">
+        <p class="text-center font-bold ">Intermediate Algebra</p>
+        <p class="text-center text-gray-500 pt-1">Intermediate</p>
+      </div>
+      <div
+        class="border mt-1 mx-auto rounded-md border-gray-400 p-5 hover:shadow  hover:border-2 hover:border-yellow-700 sm:mt-5 ">
+        <img class="pt-3 pr-5 pl-5 pb-5 w-64"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLq9_etzWnd7e2gXAlQzdxc5h9opz33XyoLzn5HK_ujl3Yi9SMhw2T5QGFol5rJi398qg&usqp=CAU">
+        <p class="text-center font-bold">Calculus</p>
+        <p class="text-center text-gray-500 pt-1">Advance</p>
+      </div>
+    </div>
+
+    <div class="text-center h-10 mt-12">
+     
+          <a  href="#four" class="bg-black text-white border mx-auto rounded-md py-3 px-6 text-center mb-9 hover:bg-slate-700" id="show-paragraph-btn" >Continue</a>
+
+    </div>
+  </div>
+  </section>
+
+
+
+
+
+
+
+  <section class="text-center pb-32 pt-52 " id="hidden-paragraph" style="display: none;">
+    <div id="four" class=" gap-16 text-center md:inline-flex px-10">
+      <div><img class="w-64 rounded-md mt-12 sm:w-60 block m-auto"
+          src="https://images.unsplash.com/photo-1562089589-d97f962943d3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHN0YW5kJTIwbGFtcCUyMHdpdGglMjB3aGl0ZSUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D">
+      </div>
+      <div class="mt-14">
+        <div class=" text-black mt-1 text-4xl font-bold">You're in the right place</div>
+        <img class="w-40 pl-1 mt-3 text-center block m-auto"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9bp-7NpU6v389hPAzUWAlK5UP22pDOoHLrMUDsL_hLi-XMmkRVVuEoq2kb-q2Lizztg&usqp=CAU">
+        <div class=" mt-5 w-96 text-start block m-auto">"Through its engaging and well structured course, Brilliant has taught me
+          mathematical concept that I previously struggled to understand. I now feel confident approaching both
+          technical job interviews and real world problem solving situation."</div>
+        <div class=" mt-7 block m-auto"> - Jacob S.</div>
+
+      </div>
+
+    </div>
+    <div class="mt-16">
+      <a id="loadButton" href="#content"
+        class="bg-black text-white border mx-auto rounded-md py-3 px-6 text-center mb-9 hover:bg-slate-700">Continue</a>
+
+    </div>
+  </section>
+
+
+  
+
+  <div id="loadingScreen">
+    <div class="loader"></div>
+    <p id="loadingText" class="text-center font-semibold w-96">Finding learning path recommendation for you based on your
+      responses</p>
+  </div>
+
+
+  <section id="content" style="display: none; " class="text-center mb-24 mt-28">
+   <div>
+    <div>
+      <h1 class=" text-black text-center mt-1 text-4xl font-bold pl-5 pr-5">Learning paths based on your answers</h1>
+      <p class="text-center mt-4">Choose one to get started. You can switch anytime</p>
+    </div>
+    <div class="md:inline-flex gap-6 mt-14 p-5 ">
+      <div
+        class="flex text-sm  border w-96 rounded-md border-gray-400 p-1 hover:shadow  hover:border-2 hover:border-red-400 mb-4 ">
+        <p class="text-center font-semibold mt-6 pl-4"><strong>Foundation Math</strong> Build your foundation skills in
+          algebra, geometry, and probabilty.</p>
+        <img class=" pr-5 pl-5 w-40 mb-3"
+          src="https://media.istockphoto.com/id/515481300/photo/diagrams-and-charts-projecting-from-tablet.webp?b=1&s=170667a&w=0&k=20&c=XFsif1XBvDtunLh7BxcoOMC4Wy-JfLKANFCgIMKUUBo="
+          alt="image">
+      </div>
+      <div class=" flex border w-96 rounded-md border-gray-400 p-1 hover:shadow  hover:border-2 hover:border-red-400 mb-4">
+        <p class="text-center text-sm font-semibold mt-6 pl-4 "><strong>mathematical Thinking</strong> Build your
+          Foundational skills in algebra, geometry, and probabilty.</p>
+        <img class=" pr-5 pl-5 pb-2 w-40"
+          src="https://media.istockphoto.com/id/515481300/photo/diagrams-and-charts-projecting-from-tablet.webp?b=1&s=170667a&w=0&k=20&c=XFsif1XBvDtunLh7BxcoOMC4Wy-JfLKANFCgIMKUUBo="
+          alt="image">
+      </div>
+
+    </div>
+
+    <div class="text-center h-10 mt-11">
+        
+          <a href="#zero" class="bg-black text-white border mx-auto rounded-md py-3 px-6 text-center mb-9 hover:bg-slate-700">Continue</a>
+
+    </div>
+  </div>
+  </section>
+
+
+
+ 
+
+
+
+
+
+  <script>
+
+
+
+
+    document.getElementById("loadButton").addEventListener("click", function () {
+      document.getElementById("loadingScreen").style.display = "block";
+
+      setTimeout(function () {
+        document.getElementById("loadingScreen").style.display = "none";
+        document.getElementById("content").style.display = "block";
+      }, 1000);
+    });
+
+
+
+
+
+
+  var showParagraphBtn = document.getElementById("show-paragraph-btn");
+  var hiddenParagraph = document.getElementById("hidden-paragraph");
+  showParagraphBtn.addEventListener("click", function() {
+    hiddenParagraph.style.display = "block";
+  });
+  var showParagraphBtn2 = document.getElementById("show-paragraph-btn2");
+  var hiddenParagraph2 = document.getElementById("hidden-paragraph2");
+  showParagraphBtn2.addEventListener("click", function() {
+    hiddenParagraph2.style.display = "block";
+  });
+  var showParagraphBtn3 = document.getElementById("show-paragraph-btn3");
+  var hiddenParagraph3 = document.getElementById("hidden-paragraph3");
+  showParagraphBtn3.addEventListener("click", function() {
+    hiddenParagraph3.style.display = "block";
+  });
+  var showParagraphBtn4 = document.getElementById("show-paragraph-btn4");
+  var hiddenParagraph4 = document.getElementById("hidden-paragraph4");
+  showParagraphBtn4.addEventListener("click", function() {
+    hiddenParagraph4.style.display = "block";
+  });
+  </script>
+</body>
+
+</html>
